@@ -28,7 +28,11 @@ jobs:
         go mod vendor
         echo $PATH
         echo $GOPATH
-        ./build.sh
+        ls /home/runner/go/bin
+        ls /opt/hostedtoolcache/go/1.18.2/x64/bin
+        ls /home/runner/.cargo/bin
+        ls /home/runner/.config/composer/vendor/bin
+        # ./build.sh
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.0
