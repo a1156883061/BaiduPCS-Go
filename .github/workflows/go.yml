@@ -23,17 +23,11 @@ jobs:
         export PATH=$GOPATH/bin:$PATH
         pwd
         go mod tidy
-        go mod vendor
         go get github.com/GeertJohan/go.rice
         go get github.com/GeertJohan/go.rice/rice
-        echo $PATH
-        echo $GOPATH
+        go mod vendor
         echo go
         ls /home/runner/go/bin
-        echo hsotedtool
-        ls /opt/hostedtoolcache/go/1.18.2/x64/bin
-        echo cargo
-        ls /home/runner/.cargo/bin
         ./build.sh
       
     - name: Upload a Build Artifact
