@@ -26,6 +26,8 @@ jobs:
         pwd
         go mod tidy
         go mod vendor
+        echo $PATH
+        echo $GOPATH
         ./build.sh
       
     - name: Upload a Build Artifact
